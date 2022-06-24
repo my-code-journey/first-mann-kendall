@@ -19,6 +19,6 @@ gfg_data = [54, 52, 53, 59, 56, 57, 51, 52, 50, 53]
 # perform Mann-Kendall Trend Test
 t = mk.original_test(gfg_data)
 print(t)
-
+#plot(x,y)
 plt.plot(gfg_data)
 plt.show()

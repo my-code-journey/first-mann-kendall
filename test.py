@@ -20,5 +20,7 @@ gfg_data = [54, 52, 53, 59, 56, 57, 51, 52, 50, 53]
 t = mk.original_test(gfg_data)
 print(t)
 #plot(x,y)
+plt.text(0, 8, t, fontsize = 17)
 plt.plot(gfg_data)
+# https://matplotlib.org/stable/tutorials/text/text_intro.html
 plt.show()

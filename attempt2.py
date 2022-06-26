@@ -29,6 +29,9 @@ def arrify(x):
 
 def plot(x):
     gfg_data = arrify(x)
+    # print(gfg_data)
+    # # print(arrify(x))
+
  
 
     """
@@ -51,15 +54,18 @@ def plot(x):
  
     # Adding axes on the figure
     ax = fig.add_subplot(111)
+    # print(t)
     heading = compound_name[x]
+    bottom_text = "trend: "+str(t[0])+"| h: "+str(t[1])+"| p: "+str(t[2])+"| z: "+str(t[3])+"| Tau: "+str(t[4])+"| s: "+str(t[5])+"| var_s: "+str(t[6])+"| slope: "+str(t[7])+"| intercept: "+str(t[8])
     #plot(x,y)
     ax.set_title(heading, fontsize=15)
-    # ax.set_xlabel('Day', fontsize=12)
+    ax.set_xlabel(bottom_text, fontsize=10)
     # ax.set_ylabel('No of Questions', fontsize=12)
-
     ax.plot(gfg_data)
     # https://matplotlib.org/stable/tutorials/text/text_intro.html
-    plt.show()
+    plt.savefig("Man Kendall Tests/"+heading.replace("/", "_") + ".png", bbox_inches='tight')
+    # plt.show()
+
+# plot(2)
 
 
-plot(3)

@@ -18,10 +18,7 @@ for idx, x in enumerate(compound_name):
 
 
 # 2: create dynamic variable names and assign empty lists why: https://www.geeksforgeeks.org/python-read-csv-columns-into-list/
-number_of_compounds = len(compound_name)+1
-for x in range(0, number_of_compounds):
-    globals()['compound%s' % x] = []
-# print(compound61)
+
 
 
 # 3: iterating over each row and append values to empty list created in (#2)
@@ -35,4 +32,18 @@ file = csv.DictReader(filename)
 # values to empty list
 # for col in file:
     # print(col[compound_name[0]])
+def arrify(x):
+    temp = []
+    for col in file:
+        temp.append(col[compound_name[x]])
+    return temp
+
+
+number_of_compounds = len(compound_name)+1
+for x in range(0, number_of_compounds):
+    print(arrify(x))
+    # print(x)
+    globals()['compound%s' % x] = arrify(x)
+       
+print(compound0)
 

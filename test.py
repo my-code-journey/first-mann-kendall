@@ -1,7 +1,7 @@
 import pymannkendall as mk
 import matplotlib.pyplot as plt
  
-gfg_data = [54, 52, 53, 59, 56, 57, 51, 52, 50, 53]
+gfg_data = [-1.06, -0.52, -0.55, -1.14, -0.03, -0.31, -1.14, -1.42, -1.13, -0.55, -1.62, -1.5, -0.5]
  
 
 """

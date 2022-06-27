@@ -1,4 +1,5 @@
 import csv
+import sys
 import pymannkendall as mk
 import matplotlib.pyplot as plt
 
@@ -29,6 +30,9 @@ def arrify(x):
 
 def plot(x):
     gfg_data = arrify(x)
+    if len(gfg_data)==0:
+        print("not doing ",x," it is empty")
+        return
     # print(gfg_data)
     # # print(arrify(x))
 
@@ -66,6 +70,5 @@ def plot(x):
     plt.savefig("Man Kendall Tests/"+heading.replace("/", "_") + ".png", bbox_inches='tight')
     # plt.show()
 
-# plot(2)
-
-
+plot(int(sys.argv[1]))
+# print(sys.argv[1])
